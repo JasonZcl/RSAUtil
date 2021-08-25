@@ -9,3 +9,4 @@ E:\ShuZhaoCL\MyGit\RSAUtil\ShuZhaoCL.RSAUtil\obj\Debug\net5.0\ShuZhaoCL.RSAUtil.
 E:\ShuZhaoCL\MyGit\RSAUtil\ShuZhaoCL.RSAUtil\obj\Debug\net5.0\ShuZhaoCL.RSAUtil.dll
 E:\ShuZhaoCL\MyGit\RSAUtil\ShuZhaoCL.RSAUtil\obj\Debug\net5.0\ref\ShuZhaoCL.RSAUtil.dll
 E:\ShuZhaoCL\MyGit\RSAUtil\ShuZhaoCL.RSAUtil\obj\Debug\net5.0\ShuZhaoCL.RSAUtil.pdb
+E:\ShuZhaoCL\MyGit\RSAUtil\ShuZhaoCL.RSAUtil\obj\Debug\net5.0\ShuZhaoCL.RSAUtil.csproj.AssemblyReference.cache
