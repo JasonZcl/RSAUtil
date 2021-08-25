@@ -51,11 +51,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhacoCL.RSAUtil\\ShuZhacoCL.RSAUtil.csproj",
-      "projectName": "ShuZhacoCL.RSAUtil",
-      "projectPath": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhacoCL.RSAUtil\\ShuZhacoCL.RSAUtil.csproj",
+      "projectUniqueName": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhaoCL.RSAUtil\\ShuZhaoCL.RSAUtil.csproj",
+      "projectName": "ShuZhaoCL.RSAUtil",
+      "projectPath": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhaoCL.RSAUtil\\ShuZhaoCL.RSAUtil.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhacoCL.RSAUtil\\obj\\",
+      "outputPath": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhaoCL.RSAUtil\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Administrator\\AppData\\Roaming\\NuGet\\NuGet.Config",

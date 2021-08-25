@@ -1,14 +1,14 @@
 ﻿using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.OpenSsl;
 using Org.BouncyCastle.Security;
-using ShuZhacoCL.RSAUtil.Entitys;
+using ShuZhaoCL.RSAUtil.Entitys;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Security.Cryptography;
 using System.Xml.Linq;
 
-namespace ShuZhacoCL.RSAUtil
+namespace ShuZhaoCL.RSAUtil
 {
 
     /// <summary>
@@ -77,9 +77,9 @@ namespace ShuZhacoCL.RSAUtil
         /// Generate RSA key in Pkcs1 format
         /// </summary>
         /// <param name="keySize">Key Size.Unit: bits(默认2048)</param>
-        /// <param name="format">Whether the format is true If it is standard pem file format(默认false)</param>
+        /// <param name="format">Whether the format is true If it is standard pem file format(默认true)</param>
         /// <returns></returns>
-        public static RSAKey Pkcs1Key(int keySize = 2048, bool format = false)
+        public static RSAKey Pkcs1Key(int keySize = 2048, bool format = true)
         {
             RSAKey rSAKey = new();
 
@@ -118,9 +118,9 @@ namespace ShuZhacoCL.RSAUtil
         /// Generate Pkcs8 format RSA key
         /// </summary>
         /// <param name="keySize">Key Size.Unit: bits(默认2048)</param>
-        /// <param name="format">Whether the format is true If it is standard pem file format(默认false)</param>
+        /// <param name="format">Whether the format is true If it is standard pem file format(默认true)</param>
         /// <returns></returns>
-        public static RSAKey Pkcs8Key(int keySize = 2014, bool format = false)
+        public static RSAKey Pkcs8Key(int keySize = 2048, bool format = true)
         {
             RSAKey rSAKey = new();
 

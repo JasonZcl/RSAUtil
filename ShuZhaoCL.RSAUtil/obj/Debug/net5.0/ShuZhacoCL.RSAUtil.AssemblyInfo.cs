@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("ShuZhacoCL.RSAUtil")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ShuZhaoCL.RSAUtil")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("ShuZhacoCL.RSAUtil")]
-[assembly: System.Reflection.AssemblyTitleAttribute("ShuZhacoCL.RSAUtil")]
+[assembly: System.Reflection.AssemblyProductAttribute("ShuZhaoCL.RSAUtil")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ShuZhaoCL.RSAUtil")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // 由 MSBuild WriteCodeFragment 类生成。

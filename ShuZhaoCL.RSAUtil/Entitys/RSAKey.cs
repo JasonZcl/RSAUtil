@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShuZhacoCL.RSAUtil.Entitys
+namespace ShuZhaoCL.RSAUtil.Entitys
 {
     /// <summary>
     /// RSA密钥
