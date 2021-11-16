@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vrk8XI7u/+Yg9DzzYDEKmMKwmjuwYl45RA65SC5B976nwNzTuPGlc5BWZOjXk8crnL/TXdHfvWHmYqaNWQZZYw==",
+  "dgSpecHash": "jFlcT4LGYySDzcuUCQ8mgXRQTHias65fICFs5iUxX6BNxUg8VAu6MdMBVw8VvXO7EhrjeVaO57//z3jr/S49yA==",
   "success": true,
-  "projectFilePath": "E:\\ShuZhaoCL\\MyGit\\RSAUtil\\ShuZhaoCL.RSAUtil.Test\\ShuZhaoCL.RSAUtil.Test.csproj",
+  "projectFilePath": "D:\\ShuZhaoCL\\MyGit\\My\\RSAUtil\\ShuZhaoCL.RSAUtil.Test\\ShuZhaoCL.RSAUtil.Test.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Administrator\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512"
+    "C:\\Users\\admin\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512"
   ],
   "logs": []
 }
