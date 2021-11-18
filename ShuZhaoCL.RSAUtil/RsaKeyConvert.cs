@@ -1,6 +1,6 @@
-﻿using Org.BouncyCastle.Crypto.Parameters;
+﻿global using Org.BouncyCastle.Crypto.Parameters;
+global using Org.BouncyCastle.Pkcs;
 using Org.BouncyCastle.Math;
-using Org.BouncyCastle.Pkcs;
 
 namespace ShuZhaoCL.RSAUtil;
 

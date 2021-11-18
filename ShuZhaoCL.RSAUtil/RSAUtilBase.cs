@@ -1,5 +1,5 @@
-﻿using System.Linq;
-using System.Text;
+﻿global using System.Linq;
+global using System.Text;
 
 namespace ShuZhaoCL.RSAUtil;
 
@@ -43,8 +43,8 @@ public abstract class RSAUtilBase : IDisposable
     /// <para>RSA encryption does not support too large data. In this case, symmetric encryption should be used, and RSA is used to encrypt symmetrically encrypted passwords.</para>
     /// </summary>
     /// <param name="dataStr">Need to encrypt data</param>
-    /// <param name="connChar">Encrypted result link character</param>
     /// <param name="padding">Padding algorithm</param>
+    /// <param name="connChar">Encrypted result link character</param>
     /// <returns></returns>
     public string EncryptBigData(string dataStr, RSAEncryptionPadding padding, char connChar = '$')
     {
@@ -68,33 +68,33 @@ public abstract class RSAUtilBase : IDisposable
 
         return sb.ToString().TrimEnd(connChar);
     }
+
     /// <summary>
-    /// RSA 无长度限制 公钥加密
+    /// RSA No length limit ,Public key encryption
     /// </summary>
-    /// <param name="dataStr">需要加密的数据</param>
-    /// <param name="padding">填充算法</param>
+    /// <param name="dataStr">Data to be encrypted</param>
+    /// <param name="padding">Filling algorithm</param>
     /// <returns></returns>
     public string RsaEncrypt(string dataStr, RSAEncryptionPadding padding)
     {
         if (string.IsNullOrEmpty(dataStr)) return string.Empty;
         if (PublicRsa == null) throw new ArgumentException("public key can not null");
         var inputBytes = DataEncoding.GetBytes(dataStr);
-        int bufferSize = (PublicRsa.KeySize / 8) - 11;//单块最大长度
+        int bufferSize = (PublicRsa.KeySize / 8) - 11;  //Maximum length of single block
         var buffer = new byte[bufferSize];
-        using (MemoryStream inputStream = new MemoryStream(inputBytes), outputStream = new MemoryStream())
+        using MemoryStream inputStream = new(inputBytes), outputStream = new MemoryStream();
+        while (true)//Segmented encryption
         {
-            while (true)//分段加密
-            {
-                int readSize = inputStream.Read(buffer, 0, bufferSize);
-                if (readSize <= 0) break;
-                var temp = new byte[readSize];
-                Array.Copy(buffer, 0, temp, 0, readSize);
-                var encryptedBytes = PublicRsa.Encrypt(temp, padding);
-                outputStream.Write(encryptedBytes, 0, encryptedBytes.Length);
-            }
-            return Convert.ToBase64String(outputStream.ToArray());
+            int readSize = inputStream.Read(buffer, 0, bufferSize);
+            if (readSize <= 0) break;
+            var temp = new byte[readSize];
+            Array.Copy(buffer, 0, temp, 0, readSize);
+            var encryptedBytes = PublicRsa.Encrypt(temp, padding);
+            outputStream.Write(encryptedBytes, 0, encryptedBytes.Length);
         }
+        return Convert.ToBase64String(outputStream.ToArray());
     }
+
     /// <summary>
     /// RSA private key  decrypted
     /// </summary>
@@ -137,11 +137,12 @@ public abstract class RSAUtilBase : IDisposable
 
         return Encoding.UTF8.GetString(byteList.ToArray());
     }
+
     /// <summary>
-    /// RSA 无长度限制 私钥解密
+    /// RSA No length limit ,Private key decryption
     /// </summary>
-    /// <param name="dataStr">需要解密的数据</param>
-    /// <param name="padding">填充算法</param>
+    /// <param name="dataStr">Data to be decrypted</param>
+    /// <param name="padding">Filling algorithm</param>
     /// <returns></returns>
     public string RsaDecrypt(string dataStr, RSAEncryptionPadding padding)
     {
@@ -150,20 +151,19 @@ public abstract class RSAUtilBase : IDisposable
         var inputBytes = Convert.FromBase64String(dataStr);
         int bufferSize = PrivateRsa.KeySize / 8;
         var buffer = new byte[bufferSize];
-        using (MemoryStream inputStream = new MemoryStream(inputBytes), outputStream = new MemoryStream())
+        using MemoryStream inputStream = new MemoryStream(inputBytes), outputStream = new MemoryStream();
+        while (true)
         {
-            while (true)
-            {
-                int readSize = inputStream.Read(buffer, 0, bufferSize);
-                if (readSize <= 0) break;
-                var temp = new byte[readSize];
-                Array.Copy(buffer, 0, temp, 0, readSize);
-                var rawBytes = PrivateRsa.Decrypt(temp, padding);
-                outputStream.Write(rawBytes, 0, rawBytes.Length);
-            }
-            return Encoding.UTF8.GetString(outputStream.ToArray());
+            int readSize = inputStream.Read(buffer, 0, bufferSize);
+            if (readSize <= 0) break;
+            var temp = new byte[readSize];
+            Array.Copy(buffer, 0, temp, 0, readSize);
+            var rawBytes = PrivateRsa.Decrypt(temp, padding);
+            outputStream.Write(rawBytes, 0, rawBytes.Length);
         }
+        return Encoding.UTF8.GetString(outputStream.ToArray());
     }
+
     /// <summary>
     /// Use private key for data signing
     /// </summary>
