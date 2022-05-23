@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "w12NytV0E+MN7jHfqwA8eRbJO3Fr2sYJzk1VAAHkQwirIRS908EXtDqSftAJawO4psmthw0wnEn1SBDM2qPL+Q==",
+  "success": true,
+  "projectFilePath": "D:\\ShuZhaoCL\\MyGit\\My\\RSAUtil\\MarkZCL.RSAUtil.Test\\MarkZCL.RSAUtil.Test.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\bouncycastle.netcore\\1.8.8\\bouncycastle.netcore.1.8.8.nupkg.sha512"
+  ],
+  "logs": []
+}

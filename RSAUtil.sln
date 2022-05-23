@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31515.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShuZhaoCL.RSAUtil", "ShuZhaoCL.RSAUtil\ShuZhaoCL.RSAUtil.csproj", "{9C17FA3F-920F-45C0-B0E4-BEB2F67575EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarkZCL.RSAUtil", "MarkZCL.RSAUtil\MarkZCL.RSAUtil.csproj", "{9C17FA3F-920F-45C0-B0E4-BEB2F67575EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShuZhaoCL.RSAUtil.Test", "ShuZhaoCL.RSAUtil.Test\ShuZhaoCL.RSAUtil.Test.csproj", "{6E2C746C-0DE8-4CE8-9C67-118D4766E8E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarkZCL.RSAUtil.Test", "MarkZCL.RSAUtil.Test\MarkZCL.RSAUtil.Test.csproj", "{6E2C746C-0DE8-4CE8-9C67-118D4766E8E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
